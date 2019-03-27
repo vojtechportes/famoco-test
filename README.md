@@ -6,6 +6,15 @@
 - I have issue with service worker on Heroku
 - Normally, I would also add loading UI states for each scene, but I didn't really have time to finish this part
 
+## App UI flow
+
+### User can:
+- navigate using navigation (there is only Homepage item)
+- search for places from homepage or reset search results
+- navigate to places he found or load more
+- navigate to event detail
+- navigate from event detail to event list
+
 ## Structure
 
 ```
