@@ -29,8 +29,9 @@
 - typescript
 - styled-components
 - @material-ui
-
-...
+- koa
+- formik
+- ...
 
 ## Scripts
 
