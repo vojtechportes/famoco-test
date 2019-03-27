@@ -6,6 +6,7 @@ Responsive design of app is not perfect due to issues I had with @material-ui an
 
 ## Structure
 
+```
 /etc - webpack configuration
 /public - app template
 /src - app source files
@@ -19,6 +20,7 @@ Responsive design of app is not perfect due to issues I had with @material-ui an
 |_ /server - backend part of app
 .env - development env variable (production env variables are set manually on heroku)
 ...
+```
 
 ## Technology
 
