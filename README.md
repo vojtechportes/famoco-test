@@ -14,7 +14,7 @@
 /src - app source files
 |_ /client - frontend part of app
   |_ /components - common components
-  |_ /scenes - app scenes and sub components
+  |_ /scenes - app scenes, routing logic and sub components
   |_ /services - rest api services and interfaces
   |_ /strings - i18n content and string interfaces
   |_ /theme - styled components theme
