@@ -21,7 +21,7 @@ class CardList extends React.PureComponent<IProps> {
           {this.props.items.resultsPage.results.event.map(
             (item: IEventsDataItem, key) => {
               return (
-                <Grid item lg={3} md={4} sm={12} key={key}>
+                <Grid item lg={3} md={4} sm={12} xs={12} key={key}>
                   <Card
                     item={item}
                     onClick={this.handleClick.bind(this, item.id)}

@@ -104,7 +104,7 @@ class EventDetail extends React.PureComponent<
     );
   }
 
-  private renderEvent = (item: IEventDataDetail) => {
+  private renderEvent = (item: IEventDataDetail) => { 
     return (
       <StringsContext.Consumer>
         {({
@@ -124,7 +124,7 @@ class EventDetail extends React.PureComponent<
                   <Divider />
                 </Margin>
                 <Grid container spacing={24}>
-                  <Grid item lg={3} md={4} sm={12}>
+                  <Grid item lg={3} md={4} sm={12} xs={12}>
                     <Card>
                       <Typography variant="h6" color="inherit">
                         {event.venueHd}
@@ -172,7 +172,7 @@ class EventDetail extends React.PureComponent<
                       </Margin>
                     </Card>
                   </Grid>
-                  <Grid item lg={9} md={8} sm={12}>
+                  <Grid item lg={9} md={8} sm={12} xs={12}>
                     <Margin margin="0 0 16px">
                       <Typography variant="h6" color="inherit">
                         {event.ageRestriction}
