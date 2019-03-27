@@ -121,7 +121,6 @@ class Homepage extends React.PureComponent<{}, IState> {
             }
           },
           () => {
-            console.log(this.state);
             this.setState({ ...this.state, loading: false });
           }
         );

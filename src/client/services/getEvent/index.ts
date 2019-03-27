@@ -82,7 +82,6 @@ export const getEvent = (eventID: number) => {
     axios
       .get(`${config.API_BASE}/events/${eventID}.json?apikey=${config.API_KEY}`)
       .then((response: AxiosResponse<IEventData>) => {
-        console.log(response);
         resolve(response);
       })
       .catch((reason: AxiosError) => {
