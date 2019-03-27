@@ -28,7 +28,7 @@
   |_ /components - common components
   |_ /scenes - app scenes, routing logic and sub components
   |_ /services - rest api services and interfaces
-  |_ /strings - i18n content and string interfaces
+  |_ /strings - i18n content and string interfaces; it is using react context api. there is only one language, if there is more, i believe it would come in handy
   |_ /theme - styled components theme
   |_ /utils
 |_ /server - backend part of app
