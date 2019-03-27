@@ -19,6 +19,7 @@
 ## Structure
 
 ```
+/build - build folder (this folder is in .gitignore, so it is not part of this repository)
 /etc - webpack configuration
 /public - app template
 /src - app source files
@@ -31,6 +32,7 @@
   |_ /utils
 |_ /server - backend part of app
 .env - development env variables; production env variables are set manually on Heroku
+config.js - env schema and setup for development version
 ...
 ```
 
