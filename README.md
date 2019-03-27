@@ -19,7 +19,7 @@
   |_ /theme - styled components theme
   |_ /utils
 |_ /server - backend part of app
-.env - development env variables. Production env variables are set manually on Heroku
+.env - development env variables; production env variables are set manually on Heroku
 ...
 ```
 
