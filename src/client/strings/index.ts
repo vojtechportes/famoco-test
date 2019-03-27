@@ -26,6 +26,7 @@ export interface IStrings {
     event: {
       noResults: string;
       venueHd: string;
+      description: string;
       yes: string;
       no: string;
       ageRestriction: string;

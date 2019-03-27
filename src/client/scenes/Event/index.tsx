@@ -133,23 +133,32 @@ class EventDetail extends React.PureComponent<
                       <Line>
                         <PlaceIcon fontSize="small" />
                         <Typography variant="body1" color="inherit">
-                          {item.venue.street}, {item.location.city}
-                          <br />
-                          {item.venue.zip}
+                          {item.venue.street && <>{item.venue.street}, </>}
+                          {item.location.city}
+                          {item.venue.zip && (
+                            <>
+                              <br />
+                              {item.venue.zip}
+                            </>
+                          )}
                         </Typography>
                       </Line>
-                      <Line>
-                        <LinkIcon fontSize="small" />
-                        <Typography variant="body1" color="inherit">
-                          {item.venue.website}
-                        </Typography>
-                      </Line>
-                      <Line>
-                        <PhoneIcon fontSize="small" />
-                        <Typography variant="body1" color="inherit">
-                          {item.venue.phone}
-                        </Typography>
-                      </Line>
+                      {item.venue.website && (
+                        <Line>
+                          <LinkIcon fontSize="small" />
+                          <Typography variant="body1" color="inherit">
+                            {item.venue.website}
+                          </Typography>
+                        </Line>
+                      )}
+                      {item.venue.phone && (
+                        <Line>
+                          <PhoneIcon fontSize="small" />
+                          <Typography variant="body1" color="inherit">
+                            {item.venue.phone}
+                          </Typography>
+                        </Line>
+                      )}
 
                       <Margin margin="20px 0 0">
                         <MoreEventsButton
@@ -184,7 +193,7 @@ class EventDetail extends React.PureComponent<
                     </Typography>
                     <Margin margin="16px 0">
                       <Typography variant="h6" color="inherit">
-                        {event.hasEnded}
+                        {event.description}
                       </Typography>
                     </Margin>
                     <Width maxWidth="800px">

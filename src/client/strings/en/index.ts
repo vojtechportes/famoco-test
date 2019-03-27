@@ -26,6 +26,7 @@ const Strings: IStrings = {
     event: {
       noResults: "Hmmm, this event doesn't exist :/",
       venueHd: "Venue",
+      description: "Description",
       yes: "YES",
       no: "NO",
       ageRestriction: "Age restriction",
