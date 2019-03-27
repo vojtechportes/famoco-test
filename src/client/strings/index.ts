@@ -1,14 +1,14 @@
 import * as React from "react";
 
 export interface IStrings {
-	components: {
-		search: {
-			placeholder: string;
-			errors: {
-				empty: string;
-				tooShort: string;
-			}
-		};
+  components: {
+    search: {
+      placeholder: string;
+      errors: {
+        empty: string;
+        tooShort: string;
+      };
+    };
     loadMore: {
       value: string;
     };
@@ -18,10 +18,10 @@ export interface IStrings {
       drawer: {
         list: {
           homepage: string;
-        }
-      }
-    }    
-	};
+        };
+      };
+    };
+  };
   scenes: {
     event: {
       noResults: string;
@@ -34,9 +34,9 @@ export interface IStrings {
       components: {
         moreEvents: {
           value: string;
-        }
-      }
-    }
+        };
+      };
+    };
     homepage: {
       noResults: string;
       components: {
@@ -44,9 +44,9 @@ export interface IStrings {
           city: string;
           country: string;
           regionId: string;
-        }
-      }
-    };    
+        };
+      };
+    };
     region: {
       noResults: string;
       hd: string;
@@ -57,10 +57,10 @@ export interface IStrings {
         };
         cardButton: {
           value: string;
-        }
-      }
-    }
-  }
+        };
+      };
+    };
+  };
 }
 
 export { default as EN } from "./en/index";

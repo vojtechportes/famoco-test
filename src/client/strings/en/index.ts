@@ -1,14 +1,14 @@
 import { IStrings } from "../";
 
 const Strings: IStrings = {
-	components: {
-		search: {
-			placeholder: "Try Brussels or Belgium for example",
-			errors: {
-				empty: "Search field must not be empty",
-				tooShort: "Type at least two characters"
-			}
-		},
+  components: {
+    search: {
+      placeholder: "Try Brussels or Belgium for example",
+      errors: {
+        empty: "Search field must not be empty",
+        tooShort: "Type at least two characters"
+      }
+    },
     loadMore: {
       value: "Load more"
     },
@@ -21,7 +21,7 @@ const Strings: IStrings = {
         }
       }
     }
-	},
+  },
   scenes: {
     event: {
       noResults: "Hmmm, this event doesn't exist :/",

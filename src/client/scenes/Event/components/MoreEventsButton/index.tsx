@@ -39,7 +39,11 @@ export const MoreEventsButton = ({ areaName, className, onClick }: IProps) => {
         }
       }) =>
         moreEvents && (
-          <StyledButton variant="outlined" className={className} onClick={onClick}>
+          <StyledButton
+            variant="outlined"
+            className={className}
+            onClick={onClick}
+          >
             {moreEvents.value} {areaName}
           </StyledButton>
         )

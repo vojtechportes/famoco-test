@@ -33,7 +33,7 @@ const CalendarTodayIcon: any = styled(CalendarToday)`
   top: -1px;
 `;
 
-const StyledCard:any = styled(CardBase)`
+const StyledCard: any = styled(CardBase)`
   height: 100%;
   border-radius: 3px;
   cursor: pointer;

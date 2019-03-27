@@ -18,10 +18,10 @@ export interface IEventsDataItem {
   displayName: string;
   flaggedAsEnded: boolean;
   id: number;
-  location: { 
+  location: {
     city: string;
     lat: number | null;
-    lng: number | null;    
+    lng: number | null;
   };
   performance: IEventsDataItemPerformance[];
   popularity: number;
@@ -46,21 +46,21 @@ export interface IEventsDataItem {
       id: number;
       uri: string;
     };
-    uri: string; 
-  }
+    uri: string;
+  };
 }
 
 export interface IEventsDataItemPerformance {
-    id: number;
+  id: number;
+  displayName: string;
+  billing: string;
+  billingIndex: number;
+  artist: {
     displayName: string;
-    billing: string;
-    billingIndex: number;
-    artist: {
-      displayName: string;
-      id: number;
-      identifier: IEventsDataItemPerformanceIdentifier[];
-      uri: string;
-    };  
+    id: number;
+    identifier: IEventsDataItemPerformanceIdentifier[];
+    uri: string;
+  };
 }
 
 export interface IEventsDataItemPerformanceIdentifier {
@@ -68,7 +68,11 @@ export interface IEventsDataItemPerformanceIdentifier {
   mbid: string;
 }
 
-export const getMetroAreaEvents = (areaID: number, limit: number = 10, page: number = 1) => {
+export const getMetroAreaEvents = (
+  areaID: number,
+  limit: number = 10,
+  page: number = 1
+) => {
   return new Promise((resolve, reject) => {
     axios
       .get(
