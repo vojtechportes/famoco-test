@@ -6,12 +6,18 @@ import {
   IEventData,
   IEventDataDetail
 } from "src/client/services/index";
-import { Container, Margin, Line, Width } from "src/client/components/index";
+import {
+  Container,
+  Margin,
+  Line,
+  Width,
+  NoResults
+} from "src/client/components/index";
 import { Typography } from "@material-ui/core";
 import { MoreEventsButton } from "./components/MoreEventsButton/index";
 import { Card } from "./components/Card/index";
 import { StringsContext } from "src/client/strings/index";
-import { Grid } from "@material-ui/core";
+import { Grid, Divider } from "@material-ui/core";
 import Phone from "@material-ui/icons/Phone";
 import Place from "@material-ui/icons/Place";
 import Link from "@material-ui/icons/Link";
@@ -74,17 +80,27 @@ class EventDetail extends React.PureComponent<
     const { data, loading } = this.state;
 
     if (loading) {
-      return <>Loading...</>
+      return <>Loading...</>;
     }
-    
+
     return (
-      <>
-        {data.resultsPage ? (
-          <>{this.renderEvent(data.resultsPage.results.event)}</>
-        ) : (
-          <p>Event not found :(</p>
-        )}
-      </>
+      <StringsContext.Consumer>
+        {({
+          strings: {
+            scenes: { event }
+          }
+        }) =>
+          event && (
+            <>
+              {data.resultsPage ? (
+                <>{this.renderEvent(data.resultsPage.results.event)}</>
+              ) : (
+                <NoResults>{event.noResults}</NoResults>
+              )}
+            </>
+          )
+        }
+      </StringsContext.Consumer>
     );
   }
 
@@ -100,9 +116,12 @@ class EventDetail extends React.PureComponent<
             <>
               <Container>
                 <Margin margin="0 0 48px">
-                  <Typography variant="h3" color="inherit">
-                    {item.displayName}
-                  </Typography>
+                  <Margin margin="0 0 24px">
+                    <Typography variant="h3" color="inherit">
+                      {item.displayName}
+                    </Typography>
+                  </Margin>
+                  <Divider />
                 </Margin>
                 <Grid container spacing={24}>
                   <Grid item lg={3} md={4} sm={12}>

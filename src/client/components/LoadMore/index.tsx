@@ -15,6 +15,10 @@ const StyledButton = styled<ButtonProps>(Button)`
     &:hover {
       background-color: ${({ theme }) => darken(0.15, theme.colors.blue)}; 
     }
+
+    ${({ disabled, theme }) => disabled && `
+    background-color: ${theme.colors.gray3}; 
+    `};
   }
 `;
 

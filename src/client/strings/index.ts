@@ -15,10 +15,16 @@ export interface IStrings {
     appBar: {
       title: string;
       menuTitle: string;
+      drawer: {
+        list: {
+          homepage: string;
+        }
+      }
     }    
 	};
   scenes: {
     event: {
+      noResults: string;
       venueHd: string;
       yes: string;
       no: string;
@@ -31,6 +37,7 @@ export interface IStrings {
       }
     }
     homepage: {
+      noResults: string;
       components: {
         list: {
           city: string;
@@ -40,6 +47,7 @@ export interface IStrings {
       }
     };    
     region: {
+      noResults: string;
       hd: string;
       components: {
         card: {

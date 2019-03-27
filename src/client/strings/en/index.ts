@@ -14,11 +14,17 @@ const Strings: IStrings = {
     },
     appBar: {
       title: "EventsApp",
-      menuTitle: "Menu"
+      menuTitle: "Menu",
+      drawer: {
+        list: {
+          homepage: "Homepage"
+        }
+      }
     }
 	},
   scenes: {
     event: {
+      noResults: "Hmmm, this event doesn't exist :/",
       venueHd: "Venue",
       yes: "YES",
       no: "NO",
@@ -31,6 +37,7 @@ const Strings: IStrings = {
       }
     },
     homepage: {
+      noResults: "Seems like we don't have this place in our system :(",
       components: {
         list: {
           city: "City",
@@ -40,6 +47,7 @@ const Strings: IStrings = {
       }
     },
     region: {
+      noResults: "There are no events in ",
       hd: "Upcoming events in",
       components: {
         card: {

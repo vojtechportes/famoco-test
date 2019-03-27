@@ -10,13 +10,15 @@ class App extends React.Component {
   public render() {
     return (
       <>
-        <AppBar />
         <Router>
-          <Switch>
-            <Route exact={true} path="/" component={Homepage} />
-            <Route path="/region/:id/:name" component={Region} />
-            <Route path="/event/:id" component={EventDetail} />
-          </Switch>
+          <>
+            <AppBar />
+            <Switch>
+              <Route exact={true} path="/" component={Homepage} />
+              <Route path="/region/:id/:name" component={Region} />
+              <Route path="/event/:id" component={EventDetail} />
+            </Switch>
+          </>
         </Router>
       </>
     );

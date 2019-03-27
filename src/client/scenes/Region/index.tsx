@@ -1,10 +1,15 @@
 import * as React from "react";
 import { getMetroAreaEvents, IEventsData } from "src/client/services/index";
-import { LoadMore, Container } from "src/client/components/index";
+import {
+  LoadMore,
+  Container,
+  NoResults,
+  Margin
+} from "src/client/components/index";
 import { StringsContext } from "src/client/strings/index";
 import { RouteComponentProps } from "react-router-dom";
 import { AxiosResponse } from "axios";
-import { Typography } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import CardList from "./components/CardList/index";
 
 const Bottom = Container.extend`
@@ -61,14 +66,19 @@ class Region extends React.PureComponent<
           region && (
             <>
               <Container>
-                <Typography variant="h3" color="inherit">
-                  {region.hd} {this.props.match.params.name}
-                </Typography>
+                <Margin margin="0 0 24px">
+                  <Typography variant="h3" color="inherit">
+                    {region.hd} {this.props.match.params.name}
+                  </Typography>
+                </Margin>
+                <Divider />
               </Container>
               {data.resultsPage && (
                 <>
                   {data.resultsPage.totalEntries === 0 ? (
-                    <p>Nothing :(</p>
+                    <NoResults>
+                      {region.noResults} {this.props.match.params.name}
+                    </NoResults>
                   ) : (
                     <>{this.renderList(data)}</>
                   )}

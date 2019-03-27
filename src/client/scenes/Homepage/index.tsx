@@ -1,7 +1,8 @@
 import * as React from "react";
 import { getLocation, ILocationData } from "src/client/services";
-import { Search, LoadMore, Container } from "src/client/components";
+import { Search, LoadMore, Container, NoResults } from "src/client/components";
 import List from "./components/List/index";
+import { StringsContext } from "src/client/strings/index";
 import { AxiosResponse } from "axios";
 
 const Bottom = Container.extend`
@@ -33,18 +34,28 @@ class Homepage extends React.PureComponent<{}, IState> {
     const { data } = this.state;
 
     return (
-      <>
-        <Search onSearch={this.handleSearch} onReset={this.handleReset} />
-        {data.resultsPage && (
-          <>
-            {data.resultsPage.totalEntries === 0 ? (
-              <p>Nothing :(</p>
-            ) : (
-              <>{this.renderList(data)}</>
-            )}
-          </>
-        )}
-      </>
+      <StringsContext.Consumer>
+        {({
+          strings: {
+            scenes: { homepage }
+          }
+        }) =>
+          homepage && (
+            <>
+              <Search onSearch={this.handleSearch} onReset={this.handleReset} />
+              {data.resultsPage && (
+                <>
+                  {data.resultsPage.totalEntries === 0 ? (
+                    <NoResults>{homepage.noResults}</NoResults>
+                  ) : (
+                    <>{this.renderList(data)}</>
+                  )}
+                </>
+              )}
+            </>
+          )
+        }
+      </StringsContext.Consumer>
     );
   }
 
