@@ -2,7 +2,8 @@
 
 ## Notes
 
-Responsive design of app is not perfect due to issues I had with @material-ui and typescript. This is mostly issue in case of Typography.
+- Responsive design of app is not perfect due to issues I had with @material-ui and typescript. This is mostly issue in case of Typography.
+- I have issue with service worker on Heroku
 
 ## Structure
 
