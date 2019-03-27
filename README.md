@@ -12,6 +12,7 @@
 ### User can:
 - navigate using navigation (there is only Homepage item)
 - search for places from homepage or reset search results
+  - search input is being validated. empty input or less than 2 characters will trigger error
 - navigate to places he found or load more
 - navigate to event detail
 - navigate from event detail to event list
