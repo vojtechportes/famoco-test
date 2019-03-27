@@ -1,4 +1,4 @@
-# Tamoco Test App
+# Famoco Test App
 
 ## Notes
 
@@ -18,7 +18,7 @@ Responsive design of app is not perfect due to issues I had with @material-ui an
   |_ /theme - styled components theme
   |_ /utils
 |_ /server - backend part of app
-.env - development env variable (production env variables are set manually on heroku)
+.env - development env variables. Production env variables are set manually on Heroku
 ...
 ```
 
