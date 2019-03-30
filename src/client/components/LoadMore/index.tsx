@@ -6,17 +6,19 @@ import { darken } from "polished";
 
 const StyledButton = styled<ButtonProps>(Button)`
   && {
-    padding: 14px 30px;
-    border-radius: 3px;
-    background-color: ${({ theme }) => theme.colors.blue};
+    padding: 14px 30px;  
     color: ${({ theme }) => theme.colors.white};
-    font-weight: bold;
+    font-weight: 600;
+    background-color: ${({ theme }) => theme.colors.blue};
+    border-radius: 3px;
 
     &:hover {
-      background-color: ${({ theme }) => darken(0.15, theme.colors.blue)}; 
+      background-color: ${({ theme }) => darken(0.15, theme.colors.blue)};
     }
 
-    ${({ disabled, theme }) => disabled && `
+    ${({ disabled, theme }) =>
+      disabled &&
+      `
     background-color: ${theme.colors.gray3}; 
     `};
   }

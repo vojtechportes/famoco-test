@@ -7,15 +7,15 @@ import { darken } from "polished";
 const StyledButton = styled<ButtonProps>(Button)`
   && {
     padding: 8px 20px;
-    border-radius: 3px;
-    border-color: ${({ theme }) => theme.colors.blue};
     color: ${({ theme }) => theme.colors.blue};
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
+    border-color: ${({ theme }) => theme.colors.blue};
+    border-radius: 3px;
 
     &:hover {
-      border-color: ${({ theme }) => darken(0.15, theme.colors.blue)};
       color: ${({ theme }) => darken(0.15, theme.colors.blue)};
+      border-color: ${({ theme }) => darken(0.15, theme.colors.blue)};
     }
   }
 `;

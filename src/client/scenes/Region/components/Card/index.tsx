@@ -33,6 +33,16 @@ const CalendarTodayIcon: any = styled(CalendarToday)`
   top: -1px;
 `;
 
+const StyledCardHeader = styled<CardHeaderProps>(CardHeader)`
+  padding: 24px;
+  background-color: ${({ theme }) => lighten(0.4, theme.colors.blue)};
+
+  & > div > span {
+    font-weight: 600;
+    font-size: 18px;
+  }
+`;
+
 const StyledCard: any = styled(CardBase)`
   height: 100%;
   border-radius: 3px;
@@ -40,20 +50,10 @@ const StyledCard: any = styled(CardBase)`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.gray1};
-  }
-`;
 
-const StyledCardHeader = styled<CardHeaderProps>(CardHeader)`
-  padding: 24px;
-  background-color: ${({ theme }) => lighten(0.4, theme.colors.blue)};
-
-  & > div > span {
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  ${StyledCard}:hover & {
-    background-color: ${({ theme }) => lighten(0.3, theme.colors.blue)};
+    ${StyledCardHeader} {
+      background-color: ${({ theme }) => lighten(0.3, theme.colors.blue)};
+    }
   }
 `;
 
