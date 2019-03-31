@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     new SWPrecacheWebpackPlugin({
       dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: path.resolve(__dirname, "../client/service-worker.js"),
+      filename: path.resolve(__dirname, "../src/client/service-worker.js"),
       logger(message) {
         if (message.indexOf('Total precache size is') === 0) {
           return;
