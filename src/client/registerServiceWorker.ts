@@ -1,6 +1,3 @@
-// this is from the create-react-script, we will probably not use this in the boilerplate
-// (to be removed)
-
 // tslint:disable:no-console
 // In production, we register a service worker to serve assets from local cache.
 

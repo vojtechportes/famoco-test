@@ -6,14 +6,14 @@ import registerServiceWorker from "./registerServiceWorker";
 import "./styles";
 import { EN, StringsContext } from "./strings/index";
 
-registerServiceWorker();
-
 ReactDOM.render(
-	<ThemeProvider theme={theme}>
-		{/* TODO: should be filled dinamically based on browser language */}
-		<StringsContext.Provider value={{ strings: EN }}>
-			<App />
-		</StringsContext.Provider>
-	</ThemeProvider>,
-	document.getElementById("root") as HTMLElement
+  <ThemeProvider theme={theme}>
+    {/* TODO: should be filled dinamically based on browser language */}
+    <StringsContext.Provider value={{ strings: EN }}>
+      <App />
+    </StringsContext.Provider>
+  </ThemeProvider>,
+  document.getElementById("root") as HTMLElement
 );
+
+registerServiceWorker();
