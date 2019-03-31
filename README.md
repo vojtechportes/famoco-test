@@ -2,8 +2,7 @@
 
 ## Notes
 
-- Responsive design of app is not perfect due to issues I had with @material-ui and typescript. This is mostly issue in case of Typography.
-- I have issue with service worker on Heroku
+- Responsive design of app is not perfect due to issues I had with @material-ui and typescript. This is mostly issue in case of Typography
 - Normally, I would also add loading UI states for each scene, but I didn't really have time to finish this part
 - I picked songkick.com API
 
