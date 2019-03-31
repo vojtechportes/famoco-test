@@ -44,7 +44,7 @@ module.exports = {
         }
       },
       minify: true,
-      navigateFallback: path.resolve(__dirname, "../public/index.html"),
+      navigateFallback: "/",
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/],
     }),
