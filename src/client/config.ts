@@ -1,6 +1,7 @@
 interface IConfig {
 	PORT: number;
 	NODE_ENV: string;
+  PUBLIC_URL: string;  
 	API_BASE: string;
   API_KEY: string;
 }
